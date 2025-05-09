@@ -70,8 +70,7 @@ class HomepageController {
     try {
       return await _simulateApi.simulate(simulation);
     } catch (e) {
-      print('ERROR $e');
-      throw Exception('Erro na simulação');
+      throw Exception('Erro na simulação $e');
     }
   }
 }
