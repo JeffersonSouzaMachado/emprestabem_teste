@@ -1,16 +1,65 @@
-# emprestabem
+# Teste Empresta Bem Melhor
 
-A new Flutter project.
+Projeto desenvolvido para o teste técnico da Empresta Bem
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# 📱 App de Simulação de Empréstimos
 
-A few resources to get you started if this is your first Flutter project:
+Este é um aplicativo desenvolvido como avaliação técnica para uma vaga Flutter. O objetivo é permitir que usuários simulem empréstimos informando valor, instituições, convênios e quantidade de parcelas. O app consome uma API REST fornecida previamente.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🔧 Tecnologias utilizadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter com Dart**
+- **HTTP client:** http
+- **Máscara de moeda:** `flutter_multi_formatter` 
+- **Consumo de API REST**
+
+## 📁 Estrutura do projeto
+
+```bash
+lib/
+├── controllers/              # Lógica e estado da aplicação
+├── core/
+│   ├── constants/            # Constantes da API
+│   ├── models/               # Modelos de dados (DTOs)
+│   ├── services/             # Comunicação com a API
+│   ├── theme/                # Tema e estilos
+│   └── utils/                # Helpers e formatadores
+├── pages/                    # Telas principais
+├── widgets/                  # Componentes reutilizáveis
+│    ├── input                # Widgets para inserçao de dados 
+├── app.dart                  # Configuração do MaterialApp
+└── main.dart                 # Ponto de entrada
+
+```
+##Funcionalidades
+
+- Campo obrigatório para valor do empréstimo com máscara de moeda.
+
+- Seleção de múltiplas instituições e convênios (com dados da API).
+
+- Seleção de quantidade de parcelas (36, 48, 60, 72, 84).
+
+- Envio dos dados para a API com exibição dos resultados:
+
+- Instituição
+
+- Valor solicitado
+
+- Parcelas x valor (com destaque)
+
+- Taxa de juros ao mês
+
+##🔗 API
+
+A Api configurada que será utilizada está em: https://github.com/JeffersonSouzaMachado/api_comparador
+após clonar o repositório execute:
+    - composer install
+    - php artisan serve (se for rodar no localhost, se for rodar em servidor local utilize php artisan serve --host=IP-DO-SERVIDOR --port=8000 )
+
+##Device
+Para que acessar a api, ajuste o IP do HOST em:
+- lib/core/constants/const_url.dart
+  - Alterando a constante k_BASE_URL com o ip do HOST, exemplo:
+    - const String k_BASE_URL = 'http://192.168.0.12';
