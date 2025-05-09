@@ -23,13 +23,10 @@ lib/
 ├── core/
 │   ├── constants/            # Constantes da API
 │   ├── models/               # Modelos de dados (DTOs)
-│   ├── services/             # Comunicação com a API
-│   ├── theme/                # Tema e estilos
-│   └── utils/                # Helpers e formatadores
+│   ├── services/             # Comunicação com a API 
 ├── pages/                    # Telas principais
 ├── widgets/                  # Componentes reutilizáveis
 │    ├── input                # Widgets para inserçao de dados 
-├── app.dart                  # Configuração do MaterialApp
 └── main.dart                 # Ponto de entrada
 
 ```
