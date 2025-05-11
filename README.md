@@ -2,7 +2,6 @@
 
 Projeto desenvolvido para o teste técnico da Empresta Bem
 
-## Getting Started
 
 # 📱 App de Simulação de Empréstimos
 
